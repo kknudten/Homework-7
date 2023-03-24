@@ -11,6 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Homework 7
 
+Link to my github repo:
+
+<https://github.com/kknudten/Homework-7.git>
+
 ```{r}
 # access data for assignment:
 HAPPY <- readRDS("data/HAPPY.rds")
@@ -24,3 +28,9 @@ HAPPY
 3.  Bring all levels of factors into a sensible order. For marital you could e.g. order the levels according to average age.
 
 Save the final data set as RDS file (binary R data) using the command: saveRDS.
+
+## Part Two (individual exploration)
+
+Investigate the relationship between happiness and two other variables in the data. Find a visualization that captures the relationship and write a paragraph to describe it.
+
+Upload your answers and the dataset to the repository.
