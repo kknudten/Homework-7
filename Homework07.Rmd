@@ -56,6 +56,26 @@ HAPPY
 
 3.  Bring all levels of factors into a sensible order. For marital you could e.g. order the levels according to average age.
 
+    ```{r}
+    HAPPY$HAPPY = factor(HAPPY$HAPPY, levels = c("NOT TOO HAPPY", "PRETTY HAPPY", "VERY HAPPY"))
+
+    HAPPY$SEX = factor(HAPPY$SEX, levels = c("MALE", "FEMALE"))
+
+    HAPPY$MARITAL = factor(HAPPY$MARITAL, levels = levels(reorder(HAPPY$MARITAL, HAPPY$AGE, mean, na.rm=TRUE)))
+
+    HAPPY$DEGREE = factor(HAPPY$DEGREE, levels = c("LT HIGH SCHOOL", "HIGH SCHOOL", "JUNIOR COLLEGE", "BACHELOR", "GRADUATE"))
+
+    HAPPY$FINRELA = factor(HAPPY$FINRELA, levels = c("FAR BELOW AVERAGE", "BELOW AVERAGE", "AVERAGE", "ABOVE AVERAGE", "FAR ABOVE AVERAGE"))
+
+    HAPPY$HEALTH = factor(HAPPY$HEALTH, levels = c("POOR", "FAIR", "GOOD", "EXCELLENT"))
+
+    HAPPY$PARTYID = factor(HAPPY$PARTYID, levels = c("STRONG DEMOCRAT", "NOT STR DEMOCRAT", "STRONG REPUBLICAN", "NOT STR REPUBLICAN", "IND,NEAR DEM", "INDEPENDENT", "IND,NEAR REP", "OTHER PARTY"))
+
+    HAPPY$POLVIEWS = factor(HAPPY$POLVIEWS, levels = levels(reorder(HAPPY$POLVIEWS, HAPPY$AGE, mean, na.rm=TRUE)))
+    str(HAPPY)
+    saveRDS
+    ```
+
 Save the final data set as RDS file (binary R data) using the command: saveRDS.
 
 ## Part Two (individual exploration)
