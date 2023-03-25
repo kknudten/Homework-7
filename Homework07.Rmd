@@ -82,4 +82,10 @@ HAPPY
 
 Investigate the relationship between happiness and two other variables in the data. Find a visualization that captures the relationship and write a paragraph to describe it.
 
+Question 1: Which gender is happier?
+
+```{r}
+ggplot(HAPPY, aes(x = HAPPY, fill = SEX)) + geom_bar(position="fill")
+```
+
 Upload your answers and the dataset to the repository.
