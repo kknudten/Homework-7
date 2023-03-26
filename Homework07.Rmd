@@ -88,4 +88,20 @@ Question 1: Which gender is happier?
 ggplot(HAPPY, aes(x = HAPPY, fill = SEX)) + geom_bar(position="fill")
 ```
 
+For this first visual, it appears that women have the majority in every happiness level over men. This could be due to there being more women participants in this data set. It is hard to tell much of a difference in proportions between happiness levels, but it appears that the level where the men's proportion is the largest is for category "PRETTY HAPPY". In order to possibly look at happiness and account for uneven group numbers between sexes, I have switched the mosaic axes as shown in the next visual.
+
+```{r}
+ggplot(HAPPY, aes(x=SEX, fill=HAPPY)) + geom_bar(position="fill")
+```
+
+In this format, we can see that males and females actually are very similarly distributed among the happiness spectrum. It appears that for both genders, a small proportion are not too happy, the largest proportion are pretty happy, and the second largest proportion are very happy. For both genders, less than 25% are not too happy.
+
+Question 2: Does health influence happiness?
+
+```{r}
+ggplot(HAPPY, aes(x=HEALTH, fill=HAPPY)) + geom_bar(position="fill")
+```
+
+This visual definitely gives more valuable information than the gender one. It appears that the happiness level "NOT TOO HAPPY" is its highest for people with poor health. The happiness level "NOT TOO HAPPY" is the lowest for people in excellent health. In addition, the happiness level "VERY HAPPY" is at its highest for people with excellent health. The overall graph trend is that as people's health level improves, they become more happy.
+
 Upload your answers and the dataset to the repository.
