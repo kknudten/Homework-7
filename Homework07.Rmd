@@ -18,7 +18,7 @@ Link to my github repo:
 ```{r}
 # access data for assignment:
 HAPPY <- readRDS("data/HAPPY.rds")
-HAPPY
+head(HAPPY)
 ```
 
 ## Part One (Cleaning)
@@ -29,7 +29,7 @@ HAPPY
     HAPPY[HAPPY == "IAP"] <- NA
     HAPPY[HAPPY == "DK"] <- NA
     HAPPY[HAPPY == "NA"] <- NA
-    HAPPY
+    head(HAPPY)
     ```
 
 2.  Check the type of the variable and cast into the right type (factor variable for categorical variables). For age, change "89 OR OLDER" to 89 and assume the variable should be numeric.
@@ -85,6 +85,7 @@ Investigate the relationship between happiness and two other variables in the da
 Question 1: Which gender is happier?
 
 ```{r}
+library(ggplot2)
 ggplot(HAPPY, aes(x = HAPPY, fill = SEX)) + geom_bar(position="fill")
 ```
 
